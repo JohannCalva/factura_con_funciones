@@ -43,6 +43,18 @@ int main(void){
     int embrague = 0;
     int faros = 0;
     int radiadores = 0;
+
+    int t_llantas;
+    int t_frenos;
+    int t_embrague;
+    int t_faros;
+    int t_radiador;
+
+    int subtotal;
+    int descuento;
+    int des_total;
+    int iva;
+    int total;
     
     do{
         printf("__________________MENU__________________\n");
@@ -107,17 +119,13 @@ int main(void){
                 
                 break;
             case 2:
-                int t_llantas = llantas*p_llantas;
-                int t_frenos = frenos*p_frenos;
-                int t_embrague = embrague*p_embrague;
-                int t_faros = faros*p_faros;
-                int t_radiador = radiadores*p_radiador;
+                t_llantas = llantas*p_llantas;
+                t_frenos = frenos*p_frenos;
+                t_embrague = embrague*p_embrague;
+                t_faros = faros*p_faros;
+                t_radiador = radiadores*p_radiador;
 
-                int subtotal = t_llantas + t_frenos + t_embrague + t_faros + t_radiador;
-                int descuento;
-                int des_total;
-                int iva;
-                int total;
+                subtotal = t_llantas + t_frenos + t_embrague + t_faros + t_radiador;
 
                 printf("___________________FACTURA__________________\n");
                 printf("Nombre y Apellido: %s\n", nombre);

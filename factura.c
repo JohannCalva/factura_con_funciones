@@ -4,17 +4,18 @@
 
 int main(void){
 
-    char nombre[20];
-    char cedula[10];
+    char nombre[40];
+    char cedula[12];
     char fecha[14];
     char ciudad[20];
-    char telefono[10];
+    char telefono[20];
 
     int opcion_menu;
     int opcion_producto;
 
     printf("Nombre: ");
     fgets(nombre, sizeof(nombre), stdin);
+    nombre[strcspn(nombre, "\n")] = 0;
     printf("Numero de cedula: ");
     do{
         scanf("%s", cedula);
@@ -24,7 +25,7 @@ int main(void){
             printf("Numero de cedula valido.\n");
         }
     }while(validarCedula(cedula)==0);
-    printf("Fecha: ");
+    printf("Fecha (dd/mm/aaaa): ");
     scanf("%s", fecha);
     printf("Ciudad: ");
     scanf("%s", ciudad);
@@ -57,12 +58,12 @@ int main(void){
                 
                 do{
                     printf("\nSeleccione el producto que desea comprar\n");
-                    printf("1. Llantas\n");
-                    printf("2. Kit Pastillas de freno\n");
-                    printf("3. Kit de embrague\n");
-                    printf("4. Faro\n");
-                    printf("5. Radiador\n");
-                    printf("6. Salir del menu e imprimir factura\n");
+                    printf("1. Llantas ($150)\n");
+                    printf("2. Kit Pastillas de freno ($55)\n");
+                    printf("3. Kit de embrague ($180)\n");
+                    printf("4. Faro ($70)\n");
+                    printf("5. Radiador ($120)\n");
+                    printf("6. Salir del menu de productos\n");
                     printf("Opcion: ");
                     scanf("%d", &opcion_producto);
 
